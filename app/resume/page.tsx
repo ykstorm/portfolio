@@ -35,7 +35,7 @@ export default function ResumePage() {
         <section className="mb-8">
           <h2 className="font-mono text-sm text-[var(--color-accent)] mb-3">// summary</h2>
           <p className="text-[var(--color-text-primary)] leading-relaxed">
-            Backend-focused engineer who ships production AI products end-to-end. Solo-built Homesty.ai — live, commission-generating real estate AI platform with 165 production deploys, streaming GPT-4o chat, custom 7-module Decision Engine, Upstash Redis rate limiting, and RAG infrastructure.
+            Solo CTO who built Homesty.ai from scratch — production AI platform handling real buyer conversations, generating real commission. Streaming GPT-4o with runtime guardrails (abort mid-generation on policy violations), pgvector RAG with sub-50ms retrieval, 165 production deploys with zero-downtime, custom 7-module Decision Engine enforcing 6 business locks, and an operator-facing admin system with RERA paste-extract for all 8 pages. Also built CodeCraft AI: browser-based IDE running real Node.js via WebContainers (13K+ LOC, no server-side compute). Currently interviewing for Staff+ roles at AI product companies.
           </p>
         </section>
 
@@ -74,71 +74,53 @@ export default function ResumePage() {
           <h2 className="font-mono text-sm text-[var(--color-accent)] mb-3">// projects</h2>
 
           <div className="space-y-6">
-            {/* BuyerChat */}
+            {/* Homesty.ai BuyerChat */}
             <div>
               <div className="flex items-baseline gap-3 mb-1">
-                <h3 className="font-medium text-[var(--color-text-primary)]">BuyerChat</h3>
-                <span className="font-mono text-xs text-[var(--color-text-secondary)]">AI Sales Agent Platform</span>
+                <h3 className="font-medium text-[var(--color-text-primary)]">Homesty.ai — BuyerChat AI Platform</h3>
+                <span className="font-mono text-xs text-[var(--color-text-secondary)]">homesty.ai</span>
               </div>
-              <p className="text-sm text-[var(--color-text-secondary)] mb-2">
-                End-to-end AI sales agent platform for Homesty.ai. RAG pipelines, streaming GPT-4o responses, content safety guardrails, and production deployment.
-              </p>
+              <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
+                <li>• Streaming GPT-4o chat with runtime guardrails — regex checkpoints every 16 tokens, abort mid-generation on price/commission leaks, partial delivery so users never see silence</li>
+                <li>• pgvector RAG pipeline: 6-retrieval + 0.30 score floor + amenity-boost, PART 17 context injection with source/score annotation, zero fabrication on empty retrieval</li>
+                <li>• 7-module Decision Engine: 17-stage buyer journey, 6 business locks (price quotes, commission disputes, builder agreements, Hold/Archive), AI suggests, Balvir approves</li>
+                <li>• Admin system: 8 pages (Dashboard, Project CRM, Buyer CRM, Builder CRM, Follow-Up, Revenue, Intelligence, Settings), RERA paste-extract with 60+ field deep extraction</li>
+                <li>• 830+ tests, pre-commit hooks, CHECK 1-9 discipline, zero broken-prod recoveries across 165 deploys</li>
+              </ul>
               <div className="font-mono text-xs text-[var(--color-text-secondary)]">
-                Next.js 15 · TypeScript · PostgreSQL · Redis · RAG · LangChain · Vercel
-              </div>
-              <div className="font-mono text-xs text-[var(--color-accent)] mt-1">
-                165 deploys · thousands of real conversations processed
+                Next.js 15 · TypeScript · Prisma 7 · Neon Postgres · pgvector · GPT-4o · Anthropic SDK · Upstash Redis · Sentry · Vercel
               </div>
             </div>
 
-            {/* Chai Vibe Editor */}
+            {/* CodeCraft AI */}
             <div>
               <div className="flex items-baseline gap-3 mb-1">
-                <h3 className="font-medium text-[var(--color-text-primary)]">Chai Vibe Editor</h3>
-                <span className="font-mono text-xs text-[var(--color-text-secondary)]">AI-integrated Browser IDE</span>
+                <h3 className="font-medium text-[var(--color-text-primary)]">CodeCraft AI — Browser IDE</h3>
+                <span className="font-mono text-xs text-[var(--color-text-secondary)]">chai-vibe-editor-master.vercel.app</span>
               </div>
-              <p className="text-sm text-[var(--color-text-secondary)] mb-2">
-                AI-integrated browser IDE with WebContainers (real Node.js in browser), Monaco editor, xterm.js terminal, and 4-mode Ollama AI chat.
-              </p>
+              <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
+                <li>• 13K+ LOC: WebContainers (real Node.js in browser via V8 Service Worker), Monaco Editor, xterm.js, 4-mode Ollama AI chat (Chat/Review/Fix/Optimize)</li>
+                <li>• Docker Compose: Ollama (GPU) + MongoDB + app, GitHub Actions CI, GHCR container registry, health endpoint, rate limiting (20 req/min sliding window)</li>
+                <li>• Zero server-side compute for code execution — all runtime client-side, Vercel serves only the static shell</li>
+              </ul>
               <div className="font-mono text-xs text-[var(--color-text-secondary)]">
-                React · TypeScript · WebContainers · Monaco Editor · NextAuth v5
-              </div>
-              <div className="font-mono text-xs text-[var(--color-accent)] mt-1">
-                13K+ LOC · Docker-compose production setup
+                Next.js 15 · TypeScript · WebContainers · Monaco · xterm.js · Ollama · NextAuth v5 · Prisma · MongoDB · Docker
               </div>
             </div>
 
             {/* DevOps Showcase */}
             <div>
               <div className="flex items-baseline gap-3 mb-1">
-                <h3 className="font-medium text-[var(--color-text-primary)]">DevOps Showcase</h3>
-                <span className="font-mono text-xs text-[var(--color-text-secondary)]">GitOps Pipeline</span>
+                <h3 className="font-medium text-[var(--color-text-primary)]">DevOps Showcase — Kubernetes GitOps Platform</h3>
+                <span className="font-mono text-xs text-[var(--color-text-secondary)]">github.com/ykstorm/devops-showcase</span>
               </div>
-              <p className="text-sm text-[var(--color-text-secondary)] mb-2">
-                Kubernetes + ArgoCD GitOps pipeline with zero-downtime deploys, Prometheus monitoring, and automated testing.
-              </p>
+              <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
+                <li>• kind cluster with ArgoCD (app-of-apps), Argo Rollouts (canary deploys, auto-rollback on error spike), ingress-nginx, cert-manager (TLS), Sealed Secrets (encrypted git secrets)</li>
+                <li>• Observability: Prometheus + Loki + Tempo + Grafana (dashboards for metrics/logs/traces), Pod Security Standards "restricted" on all namespaces</li>
+                <li>• BuyerChat deployed via GitOps: `ghcr.io/ykstorm/buyerchat` image, `make up` full stack bring-up, 99.9% uptime target</li>
+              </ul>
               <div className="font-mono text-xs text-[var(--color-text-secondary)]">
-                Kubernetes · ArgoCD · GitHub Actions · Docker · Prometheus · Grafana
-              </div>
-              <div className="font-mono text-xs text-[var(--color-accent)] mt-1">
-                99.9% uptime target achieved
-              </div>
-            </div>
-
-            {/* BuyerChat Guardrails */}
-            <div>
-              <div className="flex items-baseline gap-3 mb-1">
-                <h3 className="font-medium text-[var(--color-text-primary)]">BuyerChat Guardrails</h3>
-                <span className="font-mono text-xs text-[var(--color-text-secondary)]">Content Safety Layer</span>
-              </div>
-              <p className="text-sm text-[var(--color-text-secondary)] mb-2">
-                Content safety and output validation layer for LLM-powered customer-facing applications. Prompt injection prevention, PII redaction, response validation, audit logging.
-              </p>
-              <div className="font-mono text-xs text-[var(--color-text-secondary)]">
-                Python · FastAPI · Redis · LLM Integration · Security
-              </div>
-              <div className="font-mono text-xs text-[var(--color-accent)] mt-1">
-                ~98% harmful output reduction
+                Kubernetes · kind · ArgoCD · Argo Rollouts · Prometheus · Loki · Tempo · ingress-nginx · cert-manager · Sealed Secrets
               </div>
             </div>
           </div>
