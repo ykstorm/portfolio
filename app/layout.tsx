@@ -3,6 +3,8 @@ import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import ScrollProgress from "@/components/scroll-progress";
+import CursorTrail from "@/components/cursor-trail";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -43,6 +45,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="min-h-screen flex flex-col">
+        <ScrollProgress />
+        <CursorTrail />
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
