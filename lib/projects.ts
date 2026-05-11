@@ -23,7 +23,7 @@ export const projects: Project[] = [
   {
     title: "CodeCraft AI",
     description:
-      "AI-integrated browser IDE — 13K+ LOC with WebContainers (real Node.js in browser), Monaco editor, xterm.js terminal, 4-mode Ollama AI chat, NextAuth v5, Docker-compose production setup.",
+      "AI-integrated browser IDE — 13K+ LOC, ⭐1 on GitHub (real Node.js in browser), Monaco editor, xterm.js terminal, 4-mode Ollama AI chat, NextAuth v5, Docker-compose production setup.",
     longDescription:
       "Browser-based IDE with full Monaco editor, WebContainers (real Node.js runtime in browser tab), xterm.js terminal, and AI chat powered by Ollama. NextAuth v5 for auth, Prisma + MongoDB for persistence. Docker Compose for local dev, GitHub Actions CI/CD for production. Splits a 650-line monolithic AI sidebar into focused components for maintainability.",
     tags: ["Next.js 15", "WebContainers", "Monaco Editor", "Ollama", "TypeScript", "Docker"],
