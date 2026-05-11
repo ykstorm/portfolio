@@ -24,7 +24,7 @@ export default function ResumePage() {
             Lakshyaraj Singh Rao
           </h1>
           <p className="font-mono text-lg text-[var(--color-accent)] mb-4">
-            Staff Engineer · AI Systems · Full-Stack
+            Full-Stack Engineer · Backend · 2026 Graduate
           </p>
           <div className="font-mono text-sm text-[var(--color-text-secondary)]">
             raolakshyaraj@gmail.com | linkedin.com/in/lakshyarajsinghrao | github.com/ykstorm | Jaipur, India
@@ -35,7 +35,10 @@ export default function ResumePage() {
         <section className="mb-8">
           <h2 className="font-mono text-sm text-[var(--color-accent)] mb-3">// summary</h2>
           <p className="text-[var(--color-text-primary)] leading-relaxed">
-            Solo founder who built Homesty.ai from scratch — production AI platform handling real buyer conversations, generating real commission. Streaming GPT-4o with runtime guardrails (abort mid-generation on policy violations), pgvector RAG with sub-50ms retrieval, 165 production deploys with zero-downtime, custom 7-module Decision Engine enforcing 6 business locks, and an operator-facing admin system with RERA paste-extract for all 8 pages. Also built CodeCraft AI: browser-based IDE running real Node.js via WebContainers (13K+ LOC, no server-side compute). Currently interviewing for Staff+ roles at AI product companies.
+            B.Tech final-year student (2026) seeking full-stack / backend engineering roles. Solo-built
+            Homesty.ai&apos;s AI platform from scratch — streaming GPT-4o chat, pgvector RAG, runtime guardrails.
+            5 MIT-licensed open-source projects with 83+ tests, shipped to production.
+            Backend-heavy: Node.js, PostgreSQL, Redis, Kubernetes, ArgoCD. Comfortable owning features end-to-end.
           </p>
         </section>
 
@@ -45,19 +48,25 @@ export default function ResumePage() {
           <div className="flex flex-wrap gap-2">
             {[
               "TypeScript",
+              "JavaScript",
+              "Python",
+              "SQL",
+              "Node.js",
               "Next.js 15",
               "React 19",
               "Tailwind v4",
-              "Node.js",
-              "Prisma",
+              "Prisma 7",
               "PostgreSQL",
+              "pgvector",
               "Redis",
               "Docker",
               "Kubernetes",
+              "ArgoCD",
               "GitHub Actions",
               "GPT-4o",
               "RAG",
-              "pgvector",
+              "Vitest",
+              "Jest",
             ].map((skill) => (
               <span
                 key={skill}
@@ -71,107 +80,87 @@ export default function ResumePage() {
 
         {/* Projects */}
         <section className="mb-8">
-          <h2 className="font-mono text-sm text-[var(--color-accent)] mb-3">// projects</h2>
+          <h2 className="font-mono text-sm text-[var(--color-accent)] mb-3">// open source projects (all MIT licensed)</h2>
 
           <div className="space-y-6">
-            {/* Homesty.ai BuyerChat */}
-            <div>
-              <div className="flex items-baseline gap-3 mb-1">
-                <h3 className="font-medium text-[var(--color-text-primary)]">Homesty.ai — BuyerChat AI Platform</h3>
-                <span className="font-mono text-xs text-[var(--color-text-secondary)]">homesty.ai</span>
-              </div>
-              <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
-                <li>• Mid-stream regex guardrails for production GPT-4o — fires every 16 tokens, aborts on price/commission leaks, partial delivery so buyers never see silence. Zero false-positive blocks across 830+ tests</li>
-                <li>• Atomic multi-entity Prisma lock system — 4-state (Hold/Suspend/Archive) across Builder and Project models with $transaction, audit log, 40 transition tests</li>
-                <li>• RERA portal deep extraction pipeline — 60+ fields from unstructured government text (project metadata, unit configs, construction progress, compliance docs) with stream-SSE UX</li>
-                <li>• pgvector RAG pipeline: 6-retrieval + 0.30 score floor + amenity-boost, PART 17 context injection with source/score annotation, zero fabrication on empty retrieval</li>
-                <li>• 7-module Decision Engine: 17-stage buyer journey, 6 business locks, AI suggests, Balvir approves</li>
-                <li>• Admin system: 8 pages (Dashboard, Project CRM, Buyer CRM, Builder CRM, Follow-Up, Revenue, Intelligence, Settings)</li>
-                <li>• Schema operational fidelity — Prisma schema cross-referenced vs 14-section Master Manual, Neon-compatible migrations (direct-url vs pooled-url)</li>
-                <li>• 830+ tests, pre-commit hooks, CHECK 1-9 discipline, zero broken-prod recoveries across 165 deploys</li>
-              </ul>
-              <div className="font-mono text-xs text-[var(--color-text-secondary)]">
-                Next.js 15 · TypeScript · Prisma 7 · Neon Postgres · pgvector · GPT-4o · Anthropic SDK · Upstash Redis · Sentry · Vercel
-              </div>
-            </div>
-
-            {/* CodeCraft AI */}
-            <div>
-              <div className="flex items-baseline gap-3 mb-1">
-                <h3 className="font-medium text-[var(--color-text-primary)]">CodeCraft AI — Browser IDE</h3>
-                <span className="font-mono text-xs text-[var(--color-text-secondary)]">chai-vibe-editor-master.vercel.app</span>
-              </div>
-              <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
-                <li>• 13K+ LOC: WebContainers (real Node.js in browser via V8 Service Worker), Monaco Editor, xterm.js, 4-mode Ollama AI chat (Chat/Review/Fix/Optimize)</li>
-                <li>• Docker Compose: Ollama (GPU) + MongoDB + app, GitHub Actions CI, GHCR container registry, health endpoint, rate limiting (20 req/min sliding window)</li>
-                <li>• Zero server-side compute for code execution — all runtime client-side, Vercel serves only the static shell</li>
-              </ul>
-              <div className="font-mono text-xs text-[var(--color-text-secondary)]">
-                Next.js 15 · TypeScript · WebContainers · Monaco · xterm.js · Ollama · NextAuth v5 · Prisma · MongoDB · Docker
-              </div>
-            </div>
-
-            {/* DevOps Showcase */}
-            <div>
-              <div className="flex items-baseline gap-3 mb-1">
-                <h3 className="font-medium text-[var(--color-text-primary)]">DevOps Showcase — Kubernetes GitOps Platform</h3>
-                <span className="font-mono text-xs text-[var(--color-text-secondary)]">github.com/ykstorm/devops-showcase</span>
-              </div>
-              <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
-                <li>• kind cluster with ArgoCD (app-of-apps), Argo Rollouts (canary deploys, auto-rollback on error spike), ingress-nginx, cert-manager (TLS), Sealed Secrets (encrypted git secrets)</li>
-                <li>• Observability: Prometheus + Loki + Tempo + Grafana (dashboards for metrics/logs/traces), Pod Security Standards "restricted" on all namespaces</li>
-                <li>• BuyerChat deployed via GitOps: `ghcr.io/ykstorm/buyerchat` image, `make up` full stack bring-up, 99.9% uptime target</li>
-              </ul>
-              <div className="font-mono text-xs text-[var(--color-text-secondary)]">
-                Kubernetes · kind · ArgoCD · Argo Rollouts · Prometheus · Loki · Tempo · ingress-nginx · cert-manager · Sealed Secrets
-              </div>
-            </div>
-
             {/* guardrail-proxy */}
             <div>
               <div className="flex items-baseline gap-3 mb-1">
-                <h3 className="font-medium text-[var(--color-text-primary)]">guardrail-proxy — Open Source NPM Package</h3>
-                <span className="font-mono text-xs text-[var(--color-text-secondary)]">@ykstorm/guardrail-proxy · npm · GitHub</span>
+                <h3 className="font-medium text-[var(--color-text-primary)]">guardrail-proxy</h3>
+                <span className="font-mono text-xs text-[var(--color-text-secondary)]">
+                  npm · GitHub
+                </span>
               </div>
               <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
-                <li>• Extracted buyerchat's LOCKS-1/2 guardrails into a reusable TypeScript package — StreamingGuard (16-token sliding window, hard-abort + soft-observe) + checkResponse (23 CHECK cases)</li>
-                <li>• Hard-abort patterns throw mid-stream on contact leak, business leak; soft-observe patterns fire callback and let stream continue — partial delivery guaranteed, users never see silence</li>
-                <li>• 117 tests, MIT license, TypeScript strict, published to npm — production tested on buyerchat's 830-test suite</li>
+                <li>• NPM package for production LLM safety — mid-stream abort with 16-token sliding window</li>
+                <li>• Hard-abort patterns throw immediately; soft-observe patterns fire callbacks and continue</li>
+                <li>• StreamingGuard (streaming) + checkResponse() with 23 CHECK cases. Partial delivery on every abort</li>
               </ul>
               <div className="font-mono text-xs text-[var(--color-text-secondary)]">
-                TypeScript · Node.js · Vitest · NPM Package · AI Safety · LLM Streaming
+                MIT · TypeScript · Node.js · 27 tests · Vitest
+              </div>
+            </div>
+
+            {/* codecraft-ai */}
+            <div>
+              <div className="flex items-baseline gap-3 mb-1">
+                <h3 className="font-medium text-[var(--color-text-primary)]">codecraft-ai</h3>
+                <span className="font-mono text-xs text-[var(--color-text-secondary)]">
+                  codecraft-ai.vercel.app · GitHub
+                </span>
+              </div>
+              <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
+                <li>• Browser-based IDE: WebContainers (real Node.js in browser), Monaco Editor, xterm.js terminal</li>
+                <li>• 4-mode Ollama chat (Chat/Review/Fix/Optimize). NextAuth v5, Prisma + MongoDB</li>
+                <li>• Live at codecraft-ai.vercel.app. Docker Compose dev setup. GitHub Actions CI/CD</li>
+              </ul>
+              <div className="font-mono text-xs text-[var(--color-text-secondary)]">
+                MIT · 23 tests · 13K+ LOC · Next.js 15 · TypeScript
               </div>
             </div>
 
             {/* stream-bench */}
             <div>
               <div className="flex items-baseline gap-3 mb-1">
-                <h3 className="font-medium text-[var(--color-text-primary)]">stream-bench — Open Source Benchmarking Toolkit</h3>
-                <span className="font-mono text-xs text-[var(--color-text-secondary)]">npm · GitHub</span>
+                <h3 className="font-medium text-[var(--color-text-primary)]">stream-bench</h3>
+                <span className="font-mono text-xs text-[var(--color-text-secondary)]">GitHub</span>
               </div>
               <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
-                <li>• LLM streaming benchmark: measures TTFT, TPS, guardrail overhead vs baseline across OpenAI and Anthropic providers</li>
-                <li>• JSON Lines cost ledger (api_calls.jsonl) with $2 hard ceiling — every call logged, halts before overage</li>
-                <li>• Built to quantify guardrail middleware overhead across model providers — supports custom provider adapters</li>
+                <li>• Benchmarks TTFT, TPS, and guardrail overhead vs baseline across OpenAI + Anthropic providers</li>
+                <li>• JSON Lines ledger with $2 hard ceiling — halts before overage</li>
               </ul>
               <div className="font-mono text-xs text-[var(--color-text-secondary)]">
-                TypeScript · Node.js · Benchmarking · OpenAI SDK · Anthropic SDK
+                MIT · 8 tests · TypeScript · Node.js
               </div>
             </div>
 
             {/* rag-starter */}
             <div>
               <div className="flex items-baseline gap-3 mb-1">
-                <h3 className="font-medium text-[var(--color-text-primary)]">rag-starter — Production RAG Template</h3>
+                <h3 className="font-medium text-[var(--color-text-primary)]">rag-starter</h3>
                 <span className="font-mono text-xs text-[var(--color-text-secondary)]">GitHub</span>
               </div>
               <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
-                <li>• Next.js 15 + Prisma 7 + pgvector RAG template: 0.30 cosine similarity score floor, adaptive K (6 normal / 10 for amenity queries)</li>
-                <li>• Idempotent ON CONFLICT upsert for all entity types (project, builder, locality, infra, location-data)</li>
-                <li>• Extracted from buyerchat's RAG pipeline — deployed in production, handling real queries</li>
+                <li>• pgvector embeddings with 0.30 cosine score floor, adaptive K (6 normal / 10 for amenity queries)</li>
+                <li>• embed-writer with idempotent ON CONFLICT upsert. CLI for bulk backfill with chunk size 512 tokens</li>
               </ul>
               <div className="font-mono text-xs text-[var(--color-text-secondary)]">
-                Next.js 15 · Prisma 7 · pgvector · OpenAI Embeddings · PostgreSQL
+                MIT · 15 tests · Next.js 15 · Prisma 7 · pgvector
+              </div>
+            </div>
+
+            {/* devops-showcase */}
+            <div>
+              <div className="flex items-baseline gap-3 mb-1">
+                <h3 className="font-medium text-[var(--color-text-primary)]">devops-showcase</h3>
+                <span className="font-mono text-xs text-[var(--color-text-secondary)]">GitHub</span>
+              </div>
+              <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
+                <li>• kind cluster + ArgoCD app-of-apps, Argo Rollouts (canary deploys + auto-rollback)</li>
+                <li>• Prometheus + Loki + Tempo + Grafana observability. Pod Security Standards restricted</li>
+              </ul>
+              <div className="font-mono text-xs text-[var(--color-text-secondary)]">
+                MIT · Kubernetes · ArgoCD · Prometheus · Grafana
               </div>
             </div>
           </div>
@@ -180,29 +169,44 @@ export default function ResumePage() {
         {/* Experience */}
         <section className="mb-8">
           <h2 className="font-mono text-sm text-[var(--color-accent)] mb-3">// experience</h2>
-
-          <div className="space-y-4">
-            <div>
-              <div className="flex items-baseline gap-3 mb-1">
-                <h3 className="font-medium text-[var(--color-text-primary)]">Homesty.ai</h3>
-                <span className="font-mono text-xs text-[var(--color-text-secondary)]">Founder / Engineer</span>
-              </div>
-              <p className="text-sm text-[var(--color-text-secondary)]">
-                Solo-built and deployed production AI platform generating real commission revenue. 165 production deploys. Streaming GPT-4o chat. Custom Decision Engine. RAG infrastructure. Redis rate limiting.
-              </p>
+          <div>
+            <div className="flex items-baseline gap-3 mb-1">
+              <h3 className="font-medium text-[var(--color-text-primary)]">Homesty.ai</h3>
+              <span className="font-mono text-xs text-[var(--color-text-secondary)]">Founder / Engineer · 2024 – Present</span>
             </div>
+            <ul className="text-sm text-[var(--color-text-secondary)] space-y-1">
+              <li>• Built Homesty.ai&apos;s AI platform solo — streaming GPT-4o chat with runtime guardrails (mid-generation abort)</li>
+              <li>• pgvector RAG pipeline with sub-50ms retrieval latency; Neon Postgres for serverless persistence</li>
+              <li>• 7-module Decision Engine enforcing business logic; Redis rate limiting; RERA paste-extract admin panel</li>
+              <li>• Stack: Next.js 15, Prisma 7, PostgreSQL/pgvector, Redis, Kubernetes, ArgoCD, Prometheus</li>
+            </ul>
           </div>
         </section>
 
-        {/* Print styles */}
-        <style jsx global>{`
-          @media print {
-            button { display: none; }
-            body { background: white; }
-            .min-h-screen { min-height: auto; }
-          }
-        `}</style>
+        {/* Education */}
+        <section className="mb-8">
+          <h2 className="font-mono text-sm text-[var(--color-accent)] mb-3">// education</h2>
+          <div>
+            <div className="flex items-baseline gap-3 mb-1">
+              <h3 className="font-medium text-[var(--color-text-primary)]">B.Tech, Computer Science &amp; Communication Engineering</h3>
+              <span className="font-mono text-xs text-[var(--color-text-secondary)]">Manipal University Jaipur · Expected 2026</span>
+            </div>
+            <ul className="text-sm text-[var(--color-text-secondary)] space-y-1">
+              <li>• Final year, 8th semester — CC4270 Major Project: chai-vibe-editor (Mr. Jitendra Singh Yadav)</li>
+              <li>• LeetCode: 7 problems solved  ·  GitHub: 16 public repos, 7 followers</li>
+            </ul>
+          </div>
+        </section>
       </div>
+
+      {/* Print styles */}
+      <style jsx global>{`
+        @media print {
+          button { display: none; }
+          body { background: white; }
+          .min-h-screen { min-height: auto; }
+        }
+      `}</style>
     </div>
   );
 }
