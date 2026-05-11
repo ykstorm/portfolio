@@ -1,12 +1,12 @@
 # Lakshyaraj Singh Rao — Portfolio
 
-**Staff Engineer · AI Systems · Full-Stack** · Bangalore, India · Open to Lead / Staff / Principal roles
+**Staff Engineer · AI Systems · Full-Stack** · Bangalore, India · Open to Lead / Staff / Principal roles · MIT License
 
 ---
 
 ## What I Built
 
-Solo CTO of Homesty.ai — built the entire BuyerChat AI platform from scratch: streaming GPT-4o with runtime guardrails (abort mid-generation on policy violations), pgvector RAG with sub-50ms retrieval, 165 production deploys with zero-downtime, 830+ test suite.
+Solo founder of Homesty.ai — built the entire BuyerChat AI platform from scratch: streaming GPT-4o with runtime guardrails (abort mid-generation on policy violations), pgvector RAG with sub-50ms retrieval, 165 production deploys with zero-downtime, 830+ test suite.
 
 **5 production repos on GitHub:**
 

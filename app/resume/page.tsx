@@ -35,7 +35,7 @@ export default function ResumePage() {
         <section className="mb-8">
           <h2 className="font-mono text-sm text-[var(--color-accent)] mb-3">// summary</h2>
           <p className="text-[var(--color-text-primary)] leading-relaxed">
-            Solo CTO who built Homesty.ai from scratch — production AI platform handling real buyer conversations, generating real commission. Streaming GPT-4o with runtime guardrails (abort mid-generation on policy violations), pgvector RAG with sub-50ms retrieval, 165 production deploys with zero-downtime, custom 7-module Decision Engine enforcing 6 business locks, and an operator-facing admin system with RERA paste-extract for all 8 pages. Also built CodeCraft AI: browser-based IDE running real Node.js via WebContainers (13K+ LOC, no server-side compute). Currently interviewing for Staff+ roles at AI product companies.
+            Solo founder who built Homesty.ai from scratch — production AI platform handling real buyer conversations, generating real commission. Streaming GPT-4o with runtime guardrails (abort mid-generation on policy violations), pgvector RAG with sub-50ms retrieval, 165 production deploys with zero-downtime, custom 7-module Decision Engine enforcing 6 business locks, and an operator-facing admin system with RERA paste-extract for all 8 pages. Also built CodeCraft AI: browser-based IDE running real Node.js via WebContainers (13K+ LOC, no server-side compute). Currently interviewing for Staff+ roles at AI product companies.
           </p>
         </section>
 
@@ -185,7 +185,7 @@ export default function ResumePage() {
             <div>
               <div className="flex items-baseline gap-3 mb-1">
                 <h3 className="font-medium text-[var(--color-text-primary)]">Homesty.ai</h3>
-                <span className="font-mono text-xs text-[var(--color-text-secondary)]">Founder / Staff Engineer</span>
+                <span className="font-mono text-xs text-[var(--color-text-secondary)]">Founder / Engineer</span>
               </div>
               <p className="text-sm text-[var(--color-text-secondary)]">
                 Solo-built and deployed production AI platform generating real commission revenue. 165 production deploys. Streaming GPT-4o chat. Custom Decision Engine. RAG infrastructure. Redis rate limiting.
