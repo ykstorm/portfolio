@@ -81,10 +81,13 @@ export default function ResumePage() {
                 <span className="font-mono text-xs text-[var(--color-text-secondary)]">homesty.ai</span>
               </div>
               <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
-                <li>• Streaming GPT-4o chat with runtime guardrails — regex checkpoints every 16 tokens, abort mid-generation on price/commission leaks, partial delivery so users never see silence</li>
+                <li>• Mid-stream regex guardrails for production GPT-4o — fires every 16 tokens, aborts on price/commission leaks, partial delivery so buyers never see silence. Zero false-positive blocks across 830+ tests</li>
+                <li>• Atomic multi-entity Prisma lock system — 4-state (Hold/Suspend/Archive) across Builder and Project models with $transaction, audit log, 40 transition tests</li>
+                <li>• RERA portal deep extraction pipeline — 60+ fields from unstructured government text (project metadata, unit configs, construction progress, compliance docs) with stream-SSE UX</li>
                 <li>• pgvector RAG pipeline: 6-retrieval + 0.30 score floor + amenity-boost, PART 17 context injection with source/score annotation, zero fabrication on empty retrieval</li>
-                <li>• 7-module Decision Engine: 17-stage buyer journey, 6 business locks (price quotes, commission disputes, builder agreements, Hold/Archive), AI suggests, Balvir approves</li>
-                <li>• Admin system: 8 pages (Dashboard, Project CRM, Buyer CRM, Builder CRM, Follow-Up, Revenue, Intelligence, Settings), RERA paste-extract with 60+ field deep extraction</li>
+                <li>• 7-module Decision Engine: 17-stage buyer journey, 6 business locks, AI suggests, Balvir approves</li>
+                <li>• Admin system: 8 pages (Dashboard, Project CRM, Buyer CRM, Builder CRM, Follow-Up, Revenue, Intelligence, Settings)</li>
+                <li>• Schema operational fidelity — Prisma schema cross-referenced vs 14-section Master Manual, Neon-compatible migrations (direct-url vs pooled-url)</li>
                 <li>• 830+ tests, pre-commit hooks, CHECK 1-9 discipline, zero broken-prod recoveries across 165 deploys</li>
               </ul>
               <div className="font-mono text-xs text-[var(--color-text-secondary)]">
