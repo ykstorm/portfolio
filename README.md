@@ -1,45 +1,49 @@
 # Lakshyaraj Singh Rao — Portfolio
 
-Self-taught engineer. CTO at Homesty.ai. Built BuyerChat alone — RAG pipelines, streaming responses, guardrails, and production deployment.
+**Staff Engineer · AI Systems · Full-Stack** · Bangalore, India · Open to Lead / Staff / Principal roles
+
+---
+
+## What I Built
+
+Solo CTO of Homesty.ai — built the entire BuyerChat AI platform from scratch: streaming GPT-4o with runtime guardrails (abort mid-generation on policy violations), pgvector RAG with sub-50ms retrieval, 165 production deploys with zero-downtime, 830+ test suite.
+
+**5 production repos on GitHub:**
+
+| Project | What it does | Stack |
+|---------|-------------|-------|
+| **[guardrail-proxy](https://github.com/ykstorm/guardrail-proxy)** ⭐ | Streaming guardrails for LLM apps — mid-stream abort with 16-token sliding window, 23 CHECK cases, partial delivery | TypeScript · Vitest · NPM |
+| **[stream-bench](https://github.com/ykstorm/stream-bench)** | LLM benchmark: TTFT, TPS, guardrail overhead, $2 cost ceiling | TypeScript · OpenAI · Anthropic |
+| **[rag-starter](https://github.com/ykstorm/rag-starter)** | Production RAG template: Prisma 7 + pgvector, 0.30 cosine floor, adaptive K | Next.js · Prisma · pgvector |
+| **[devops-showcase](https://github.com/ykstorm/devops-showcase)** | Kubernetes GitOps: ArgoCD app-of-apps, canary deploys, Prometheus/Loki/Tempo | Kubernetes · ArgoCD · Helm |
+| **[codecraft-ai](https://github.com/ykstorm/codecraft-ai)** ⭐ | Browser IDE: real Node.js in browser via WebContainers, Monaco, Ollama AI | Next.js · WebContainers · Docker |
+
+**Live site:** [ykstorm.github.io](https://ykstorm.github.io) — Next.js 15, Tailwind v4, dark terminal aesthetic
+
+---
 
 ## Stack
 
-- **Next.js 15** (App Router)
-- **TypeScript** (strict mode)
-- **Tailwind CSS v4** (CSS-first configuration)
-- **Deployed on Vercel**
+**Backend:** TypeScript · Next.js 15 · React 19 · Node.js · Prisma 7 · PostgreSQL/pgvector · Neon · Redis
+**AI:** GPT-4o streaming · guardrails · RAG · Ollama local LLMs
+**Platform:** Kubernetes · ArgoCD · Argo Rollouts · Prometheus · Loki · Tempo · Grafana
+**DevOps:** GitHub Actions · Docker · Docker Compose · kind · Helm · Terraform
 
-## Pages
+---
 
-| Route | Description |
-|-------|-------------|
-| `/` | Hero, featured projects, about teaser |
-| `/projects` | 4 production projects with details |
-| `/blog` | Engineering writing (4 posts) |
-| `/blog/[slug]` | Individual blog posts |
-| `/about` | Background story + skills grid |
-| `/contact` | Email, GitHub, LinkedIn links |
+## Resume
 
-## Projects
+**[View resume page →](/resume)** — Print-friendly, all 6 project bullets, LeetCode progress, skills grid.
 
-- **BuyerChat** — AI sales agent platform with RAG, streaming, guardrails
-- **Chai Vibe Editor** — Block-based content editor for SaaS
-- **DevOps Showcase** — Kubernetes, CI/CD, monitoring for production
-- **BuyerChat Guardrails** — Content safety layer for LLM apps
-
-## Development
-
-```bash
-npm install
-npm run dev
-```
-
-## Design
-
-Dark, terminal-inspired aesthetic. Linear meets Vercel meets personal. Monospace accents, cyan highlights on near-black background.
+---
 
 ## Contact
 
 - Email: raolakshyaraj@gmail.com
-- GitHub: github.com/ykstorm
-- LinkedIn: Lakshyaraj Singh Rao
+- GitHub: [github.com/ykstorm](https://github.com/ykstorm)
+- LinkedIn: [in/lakshyarajsinghrao](https://linkedin.com/in/lakshyarajsinghrao)
+- Portfolio: [ykstorm.github.io](https://ykstorm.github.io)
+
+---
+
+*Last updated: 2026-05-11*
