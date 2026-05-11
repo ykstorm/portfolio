@@ -32,7 +32,7 @@ function MagneticLink({
     >
       <Link
         href={href}
-        className={`font-mono text-sm transition-colors duration-150 ${
+        className={`font-mono text-sm transition-colors duration-150 nav-link-underline ${
           isActive
             ? "text-[var(--color-accent)]"
             : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"

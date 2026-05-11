@@ -21,6 +21,12 @@ const CODE_SNIPPETS = [
   { code: "vecdb.similaritySearch(emb)", x: "15%", y: "45%", delay: 1.2 },
 ];
 
+const TERMINAL_LINES = [
+  { cmd: "whoami", out: "Lakshyaraj Singh Rao — CTO @ Homesty.ai" },
+  { cmd: "cat skills.txt", out: "Next.js · TypeScript · Python · Kubernetes · PostgreSQL · RAG · LLMs" },
+  { cmd: "grep status resume.txt", out: "Open to Staff+ Engineering Roles | Remote | ₹25L+" },
+];
+
 function TypewriterText({ strings, prefix }: { strings: string[]; prefix: string }) {
   const [stringIndex, setStringIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -58,6 +64,48 @@ function TypewriterText({ strings, prefix }: { strings: string[]; prefix: string
       <span className="text-[var(--color-accent)]">{displayText}</span>
       <span className="inline-block w-0.5 h-4 bg-[var(--color-accent)] ml-1 animate-pulse" />
     </span>
+  );
+}
+
+function TerminalLine({ cmd, out, delay }: { cmd: string; out: string; delay: number }) {
+  const [shown, setShown] = useState(false);
+  const [typing, setTyping] = useState(false);
+  const [displayed, setDisplayed] = useState("");
+
+  useEffect(() => {
+    const showTimer = setTimeout(() => setShown(true), delay * 1000);
+    return () => clearTimeout(showTimer);
+  }, [delay]);
+
+  useEffect(() => {
+    if (!shown) return;
+    setTyping(true);
+    let i = 0;
+    const type = setInterval(() => {
+      setDisplayed(out.slice(0, i + 1));
+      i++;
+      if (i >= out.length) {
+        clearInterval(type);
+        setTyping(false);
+      }
+    }, 30);
+    return () => clearInterval(type);
+  }, [shown, out]);
+
+  if (!shown) return null;
+
+  return (
+    <div className="space-y-1">
+      <div className="flex items-center gap-2">
+        <span className="text-[var(--color-accent)]">$</span>
+        <span className="text-[var(--color-text-secondary)]">{cmd}</span>
+      </div>
+      <div className="flex items-center gap-2 pl-4">
+        <span className="text-[var(--color-text-muted)]">→</span>
+        <span className="text-[var(--color-code-green)]">{displayed}</span>
+        {typing && <span className="w-1.5 h-3 bg-[var(--color-accent)] animate-pulse ml-0.5" />}
+      </div>
+    </div>
   );
 }
 
@@ -163,13 +211,28 @@ export default function Hero() {
             <span className="font-mono text-xs text-[var(--color-text-muted)]">npm run intro</span>
           </FadeUp>
 
-          {/* Name with gradient */}
-          <FadeUp delay={0.7}>
+          {/* Terminal block */}
+          <FadeUp delay={0.65} className="mb-8 max-w-md mx-auto">
+            <div className="bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-lg overflow-hidden text-left">
+              <div className="flex items-center gap-1.5 px-4 py-2 border-b border-[var(--color-border)] bg-[var(--color-bg-tertiary)]">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />
+                <span className="font-mono text-xs text-[var(--color-text-muted)] ml-2">ykstorm@portfolio</span>
+              </div>
+              <div className="p-4 font-mono text-xs space-y-2">
+                {TERMINAL_LINES.map((line, i) => (
+                  <TerminalLine key={i} cmd={line.cmd} out={line.out} delay={0.65 + i * 0.25} />
+                ))}
+              </div>
+            </div>
+          </FadeUp>
+
+          {/* Name with gradient shimmer */}
+          <FadeUp delay={0.75}>
             <NameReveal>
               <span className="font-space text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight block">
-                <span className="bg-gradient-to-r from-[var(--color-accent)] via-[var(--color-accent-dim)] to-[var(--color-text-secondary)] bg-clip-text text-transparent">
-                  Lakshyaraj
-                </span>
+                <span className="shimmer-text">Lakshyaraj</span>
                 <br />
                 <span className="text-[var(--color-text-primary)]">Singh Rao</span>
               </span>
