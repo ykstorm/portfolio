@@ -139,6 +139,38 @@ export default function ResumePage() {
                 TypeScript · Node.js · Vitest · NPM Package · AI Safety · LLM Streaming
               </div>
             </div>
+
+            {/* stream-bench */}
+            <div>
+              <div className="flex items-baseline gap-3 mb-1">
+                <h3 className="font-medium text-[var(--color-text-primary)]">stream-bench — Open Source Benchmarking Toolkit</h3>
+                <span className="font-mono text-xs text-[var(--color-text-secondary)]">npm · GitHub</span>
+              </div>
+              <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
+                <li>• LLM streaming benchmark: measures TTFT, TPS, guardrail overhead vs baseline across OpenAI and Anthropic providers</li>
+                <li>• JSON Lines cost ledger (api_calls.jsonl) with $2 hard ceiling — every call logged, halts before overage</li>
+                <li>• Built to quantify guardrail middleware overhead across model providers — supports custom provider adapters</li>
+              </ul>
+              <div className="font-mono text-xs text-[var(--color-text-secondary)]">
+                TypeScript · Node.js · Benchmarking · OpenAI SDK · Anthropic SDK
+              </div>
+            </div>
+
+            {/* rag-starter */}
+            <div>
+              <div className="flex items-baseline gap-3 mb-1">
+                <h3 className="font-medium text-[var(--color-text-primary)]">rag-starter — Production RAG Template</h3>
+                <span className="font-mono text-xs text-[var(--color-text-secondary)]">GitHub</span>
+              </div>
+              <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
+                <li>• Next.js 15 + Prisma 7 + pgvector RAG template: 0.30 cosine similarity score floor, adaptive K (6 normal / 10 for amenity queries)</li>
+                <li>• Idempotent ON CONFLICT upsert for all entity types (project, builder, locality, infra, location-data)</li>
+                <li>• Extracted from buyerchat's RAG pipeline — deployed in production, handling real queries</li>
+              </ul>
+              <div className="font-mono text-xs text-[var(--color-text-secondary)]">
+                Next.js 15 · Prisma 7 · pgvector · OpenAI Embeddings · PostgreSQL
+              </div>
+            </div>
           </div>
         </section>
 
