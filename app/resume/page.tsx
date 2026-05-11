@@ -123,6 +123,22 @@ export default function ResumePage() {
                 Kubernetes · kind · ArgoCD · Argo Rollouts · Prometheus · Loki · Tempo · ingress-nginx · cert-manager · Sealed Secrets
               </div>
             </div>
+
+            {/* guardrail-proxy */}
+            <div>
+              <div className="flex items-baseline gap-3 mb-1">
+                <h3 className="font-medium text-[var(--color-text-primary)]">guardrail-proxy — Open Source NPM Package</h3>
+                <span className="font-mono text-xs text-[var(--color-text-secondary)]">@ykstorm/guardrail-proxy · npm · GitHub</span>
+              </div>
+              <ul className="text-sm text-[var(--color-text-secondary)] space-y-1 mb-2">
+                <li>• Extracted buyerchat's LOCKS-1/2 guardrails into a reusable TypeScript package — StreamingGuard (16-token sliding window, hard-abort + soft-observe) + checkResponse (23 CHECK cases)</li>
+                <li>• Hard-abort patterns throw mid-stream on contact leak, business leak; soft-observe patterns fire callback and let stream continue — partial delivery guaranteed, users never see silence</li>
+                <li>• 117 tests, MIT license, TypeScript strict, published to npm — production tested on buyerchat's 830-test suite</li>
+              </ul>
+              <div className="font-mono text-xs text-[var(--color-text-secondary)]">
+                TypeScript · Node.js · Vitest · NPM Package · AI Safety · LLM Streaming
+              </div>
+            </div>
           </div>
         </section>
 
