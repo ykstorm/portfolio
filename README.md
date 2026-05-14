@@ -1,6 +1,8 @@
 # Lakshyaraj Singh Rao — Portfolio
 
-**Staff Engineer · AI Systems · Full-Stack** · Bangalore, India · Open to Lead / Staff / Principal roles · MIT License
+**Founding Engineer · AI Systems · Full-Stack** · Jaipur → Bangalore + Mumbai + Remote · Open to Founding / Senior IC roles · Apache 2.0 License
+
+> **Full site rebuild in progress** — track at [github.com/ykstorm/portfolio/issues/1](https://github.com/ykstorm/portfolio/issues/1)
 
 ---
 
